@@ -31,10 +31,11 @@ export const skillGroups: readonly SkillGroup[] = [
     items: [
       { name: "Angular", icon: "angular" },
       { name: "React", icon: "react" },
+      { name: "Next.js", icon: "nextjs" },
       { name: "Spring Boot", icon: "spring" },
       { name: "ASP.NET Core", icon: "dotnetcore" },
       { name: "PostgreSQL", icon: "postgresql" },
-      { name: "LangChain", icon: "langchain", treatment: "monochrome" },
+      { name: "LangChain", icon: "langchain-blue" },
       { name: "LangGraph", icon: "langgraph", treatment: "monochrome" },
     ],
   },
@@ -44,6 +45,7 @@ export const skillGroups: readonly SkillGroup[] = [
     items: [
       { name: "Docker", icon: "docker" },
       { name: "Kubernetes", icon: "kubernetes" },
+      { name: "Helm", icon: "helm", treatment: "light" },
       { name: "Terraform", icon: "terraform" },
       { name: "GitHub Actions", icon: "githubactions" },
       { name: "AWS", icon: "amazonwebservices", treatment: "light" },

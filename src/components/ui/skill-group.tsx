@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { CSSProperties } from "react";
 import { skillGroups } from "@/data/skills";
 
 type SkillGroupProps = {
@@ -10,7 +11,7 @@ export function SkillGroup({ group }: SkillGroupProps) {
   return (
     <div>
       <h3 id={headingId} className="text-center text-xl font-semibold tracking-tight">{group.title}</h3>
-      <ul className={`skills-grid skills-grid-${group.layout} mx-auto mt-6`} aria-labelledby={headingId}>
+      <ul className="skills-grid mx-auto mt-6" style={{ "--skill-desktop-columns": Math.min(group.items.length, 8) } as CSSProperties} aria-labelledby={headingId}>
         {group.items.map(({ name, icon, treatment }) => (
           <li key={name} className="skill-tile">
             <Image

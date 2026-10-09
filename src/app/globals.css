@@ -208,11 +208,8 @@ body {
 
 @media (min-width: 640px) {
   html { --section-space: 5rem; }
-  .skills-grid-languages, .skills-grid-frameworks {
+  .skills-grid {
     --skill-columns: 4;
-  }
-  .skills-grid-cloud {
-    --skill-columns: 3;
   }
 }
 
@@ -226,9 +223,7 @@ body {
 }
 
 @media (min-width: 1152px) {
-  .skills-grid-languages { --skill-columns: 8; }
-  .skills-grid-frameworks { --skill-columns: 7; }
-  .skills-grid-cloud { --skill-columns: 6; }
+  .skills-grid { --skill-columns: var(--skill-desktop-columns, 8); }
 }
 
 @media (hover: hover) and (pointer: fine) {
