@@ -4,10 +4,10 @@ Single-page portfolio with a personalized Navbar and Hero. Technical Skills, Exp
 
 ## Local development
 
-Use Node.js 20.9 or newer and npm.
+Use Node.js 24 LTS and npm (matching the Vercel deployment runtime).
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
@@ -60,10 +60,14 @@ Recruiter-focused review and validation are documented in [RECRUITER_REVIEW.md](
 
 ## Production metadata and media
 
-Canonical, Open Graph, and Twitter metadata use https://richardkim.me. Override NEXT_PUBLIC_SITE_URL at build time if the public origin changes; .env.example shows the setting. The app includes favicon/Apple icons, a generated 1200x630 sharing image, robots.txt, and a sitemap.
+Canonical, Open Graph, and Twitter metadata automatically use Vercel's production URL, with a localhost fallback for local builds. No environment variables need to be configured manually. An optional NEXT_PUBLIC_SITE_URL override can select a custom domain after it is attached; .env.example documents it. The app includes favicon/Apple icons, a generated 1200x630 sharing image, robots.txt, and a sitemap.
 
 Project thumbnails use lazy Next.js Image and WebP assets. Inline MP4 URLs attach only after playback interaction, with preload="none". Expanded demos use a native dialog with native playback controls, Escape/close controls, focus containment/restoration, and scroll locking. AI-Agent Search has English captions generated locally from narration; technical names were corrected. Review caption wording/timing before publishing. The cursor blink uses CSS; Framer Motion is not imported into the page runtime.
 
 Expanded demos load separate higher-quality CRF 17 copies only when the player opens, with metadata preloading at that point. They retain original recording dimensions and audio (AI-Agent: 1920×1080, approximately 9.4 MB; Website Generator: 1912×852, approximately 2.3 MB). The player provides an explicit Fullscreen button, an iOS native-video fallback, and a direct-video link if fullscreen is unavailable. Lightweight inline previews remain unchanged.
 
 Production validation details are in [PRODUCTION_READINESS.md](./PRODUCTION_READINESS.md).
+
+## Vercel deployment
+
+See [DEPLOYMENT.md](./DEPLOYMENT.md) for GitHub push commands, exact Vercel import settings, automatic updates, public-URL verification, and custom-domain setup. Run `npm run check:deployment -- https://YOUR_PROJECT.vercel.app` after deployment to check production routes and assets.

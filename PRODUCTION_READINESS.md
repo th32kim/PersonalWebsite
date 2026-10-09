@@ -48,3 +48,14 @@ Replaced the cursor's Framer Motion import with a CSS blink while keeping pause 
 - Existing experience, navigation, portrait alignment, Contact links, and email copy/clipboard-denied fallbacks pass regression checks.
 
 This pass does not deploy the site or configure DNS. Automated accessibility checks do not replace a full assistive-technology review.
+
+## Vercel preparation
+
+- Pinned Node.js 24 and aligned ESLint with the version supported by the installed lint plugins. Build-time tools remain devDependencies; runtime Next.js, React, and icons are dependencies.
+- No manually configured environment variables or secrets are required. Canonical/social URLs now follow Vercel's automatically provided production host, with an optional custom-domain override and localhost fallback.
+- A fresh lockfile install and build were verified under Node.js 24 in an isolated copy. That nested test copy needed an explicit temporary Turbopack root to avoid parent-lockfile detection; the actual repository builds with its unchanged default Next.js config.
+- Lint, typecheck, and the repository production build pass under Node.js 24. All 37 public media assets, resume PDF signature, MP4 range responses, generated metadata endpoints, optimized portrait, and 404 behavior pass against the local production server. Static asset reference casing matches filenames for Linux deployment.
+- GitHub profile and all four supplied project URLs returned HTTP 200. LinkedIn returned its automated-client blocking status 999; its exact supplied destination is preserved. Email uses the supplied mailto address with a copy fallback.
+- Browser checks passed at 320, 390, 768, and 1440px: both videos decode at native dimensions, fullscreen works, audio is retained, no eager video requests occur, and the dialog accessibility scan reports no violations.
+- Production dependency audit reports zero advisories. Five previously documented development-tool advisories remain; no forced major-version audit fix was applied.
+- Added `npm run check:deployment -- URL` and [DEPLOYMENT.md](./DEPLOYMENT.md). Live Vercel deployment verification is pending account access and a real deployment URL; local tests are not evidence of deployment.
