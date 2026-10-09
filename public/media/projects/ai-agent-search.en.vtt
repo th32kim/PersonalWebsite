@@ -1,0 +1,52 @@
+WEBVTT
+
+00:00:00.000 --> 00:00:09.400
+AI-Agent Search Engine that I built to research a question across
+Google, Bing, and Reddit,
+
+00:00:09.400 --> 00:00:12.840
+then synthesize the results into one clear answer.
+
+00:00:12.840 --> 00:00:18.800
+In the workflow diagram on the left, the user starts by entering a
+question into the console.
+
+00:00:18.800 --> 00:00:23.980
+My LangGraph workflow then launches separate Google, Bing, and Reddit
+search.
+
+00:00:23.980 --> 00:00:29.340
+The Reddit branches go deeper by using structured LLM output to select
+useful posts, retrieve
+
+00:00:29.340 --> 00:00:34.220
+comments, and feed that data into a dedicated analysis loop.
+
+00:00:34.220 --> 00:00:40.500
+After that, each source goes through its own analysis nodes, and the
+final synthesis node
+
+00:00:40.500 --> 00:00:43.780
+combines the finding into one response.
+
+00:00:43.780 --> 00:00:48.700
+In the console demo, you can see the system moving through each stage,
+launching searches,
+
+00:00:48.700 --> 00:00:54.980
+selecting Reddit URLs, retrieving comments, analyzing sources, and
+printing the final answer.
+
+00:00:55.000 --> 00:00:59.860
+My role was designing and implementing the orchestration layer using
+Python, LangGraph,
+
+00:00:59.860 --> 00:01:03.520
+LangChain, OpenAI, Bright Data, and Pydantic.
+
+00:01:03.520 --> 00:01:08.480
+I'm especially proud of using structured output because it made the
+agent more reliable and
+
+00:01:08.480 --> 00:01:09.680
+easier to debug.
