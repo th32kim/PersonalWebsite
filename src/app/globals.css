@@ -217,9 +217,9 @@ body {
   html { --section-space: 6rem; }
 }
 
-/* Align Contact below the header while leaving room for the compact footer. */
+/* Let Contact fit its content instead of reserving a full viewport. */
 #contact {
-  min-height: calc(100svh + var(--section-space) - var(--header-height) - var(--anchor-gap) - 4.5rem);
+  --section-space: clamp(2.5rem, 4vw, 3rem);
 }
 
 @media (min-width: 1152px) {
