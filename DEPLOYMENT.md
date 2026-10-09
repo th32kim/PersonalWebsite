@@ -4,12 +4,12 @@ This is a standard Next.js App Router project. No database, backend service, API
 
 ## Current deployment
 
-- Public site: https://personalwebsite-mu-puce.vercel.app
+- Public site: https://richardkim.vercel.app
 - Vercel project: https://vercel.com/richard-e586/personalwebsite
 - GitHub repository: https://github.com/th32kim/PersonalWebsite (`main` is the default branch).
 - The production deployment is Ready. An unauthenticated HTTP check passed for all 37 public media assets, resume PDF, MP4 byte ranges, optimized portrait, metadata, and routing. Canonical and social-sharing URLs use the real production hostname. Clean-browser playback/fullscreen checks passed at 320, 390, 768, and 1440px with no page errors.
-- **Automatic GitHub updates are not connected yet.** Vercel requires the account owner to add GitHub under Account Settings → Authentication → Login Connections. Connect `th32kim`, then open the existing `personalwebsite` project → Settings → Git and connect `th32kim/PersonalWebsite`, with production branch `main`. Alternatively, run `npx vercel git connect https://github.com/th32kim/PersonalWebsite.git --yes --scope richard-e586` after connecting the account. Do not create a duplicate project for this step.
-- This first deployment used the authenticated Vercel CLI. Until the Git connection is completed, pushes to GitHub alone will not deploy updates; use `npx vercel deploy --prod --scope richard-e586` for a manual deployment.
+- GitHub is connected to `th32kim/PersonalWebsite`, with production branch `main`. Successful pushes to `main` deploy automatically to the production URL.
+- The initial deployment used the Vercel CLI. The requested `richardkim.vercel.app` address is now assigned to this project; no paid domain registration or hosting upgrade was needed.
 
 ## Push to GitHub
 
@@ -28,7 +28,7 @@ Git is already initialized and `origin` is configured. If there are no new chang
 
 ## Import and deploy
 
-For a fresh GitHub import, follow these steps. The project linked above is already deployed; use its Settings → Git to complete integration instead of importing a second copy.
+For a fresh GitHub import, follow these steps. The existing project is already connected and deployed; do not import a second copy.
 
 1. Sign in to https://vercel.com using GitHub.
 2. Choose **Add New → Project**, authorize access to your new repository, and select **Import**.
