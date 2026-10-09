@@ -70,4 +70,6 @@ Production validation details are in [PRODUCTION_READINESS.md](./PRODUCTION_READ
 
 ## Vercel deployment
 
+Live site: https://personalwebsite-mu-puce.vercel.app. The public production URL has passed asset, routing, resume, and browser playback/fullscreen checks. Automatic GitHub deployment still requires connecting GitHub in Vercel account authentication and linking the existing project to the repository.
+
 See [DEPLOYMENT.md](./DEPLOYMENT.md) for GitHub push commands, exact Vercel import settings, automatic updates, public-URL verification, and custom-domain setup. Run `npm run check:deployment -- https://YOUR_PROJECT.vercel.app` after deployment to check production routes and assets.

@@ -2,6 +2,15 @@
 
 This is a standard Next.js App Router project. No database, backend service, API keys, or manually configured environment variables are required. Keep the default Next.js output; do not enable static export, since the site uses Next.js image optimization and generated sharing images.
 
+## Current deployment
+
+- Public site: https://personalwebsite-mu-puce.vercel.app
+- Vercel project: https://vercel.com/richard-e586/personalwebsite
+- GitHub repository: https://github.com/th32kim/PersonalWebsite (`main` is the default branch).
+- The production deployment is Ready. An unauthenticated HTTP check passed for all 37 public media assets, resume PDF, MP4 byte ranges, optimized portrait, metadata, and routing. Canonical and social-sharing URLs use the real production hostname. Clean-browser playback/fullscreen checks passed at 320, 390, 768, and 1440px with no page errors.
+- **Automatic GitHub updates are not connected yet.** Vercel requires the account owner to add GitHub under Account Settings → Authentication → Login Connections. Connect `th32kim`, then open the existing `personalwebsite` project → Settings → Git and connect `th32kim/PersonalWebsite`, with production branch `main`. Alternatively, run `npx vercel git connect https://github.com/th32kim/PersonalWebsite.git --yes --scope richard-e586` after connecting the account. Do not create a duplicate project for this step.
+- This first deployment used the authenticated Vercel CLI. Until the Git connection is completed, pushes to GitHub alone will not deploy updates; use `npx vercel deploy --prod --scope richard-e586` for a manual deployment.
+
 ## Push to GitHub
 
 The project is connected to [th32kim/PersonalWebsite](https://github.com/th32kim/PersonalWebsite). From `C:\PersonalWebsite`, commit any remaining changes and push the production branch:
@@ -15,9 +24,11 @@ git push -u origin main
 
 Git is already initialized and `origin` is configured. If there are no new changes, skip the commit command. If GitHub authentication is needed, run `gh auth login`. For a different new repository, create it empty on GitHub and set its URL with `git remote set-url origin YOUR_REPOSITORY_URL` before pushing. Set the repository default branch and Vercel production branch to `main`.
 
-`.gitignore` excludes node_modules, build output, temporary audit/tool folders, local environment files, and Vercel account/project-link metadata. Commit `package-lock.json`, `src`, `public`, `scripts`, and the root configuration files. Every media file is below GitHub's 100 MB individual-file limit; MP4s are ordinary repository assets and do not require Git LFS.
+`.gitignore` excludes node_modules, build output, temporary audit/tool folders, local environment files, and Vercel account/project-link metadata. `.vercelignore` also excludes those files from CLI uploads (verified upload: approximately 19.4 MB). Commit `package-lock.json`, `src`, `public`, `scripts`, and the root configuration files. Every media file is below GitHub's 100 MB individual-file limit; MP4s are ordinary repository assets and do not require Git LFS. The CLI-created `.env.local` contains account/tooling data, is ignored, and is not required by the application.
 
 ## Import and deploy
+
+For a fresh GitHub import, follow these steps. The project linked above is already deployed; use its Settings → Git to complete integration instead of importing a second copy.
 
 1. Sign in to https://vercel.com using GitHub.
 2. Choose **Add New → Project**, authorize access to your new repository, and select **Import**.
