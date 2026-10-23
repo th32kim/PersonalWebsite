@@ -19,8 +19,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "September 2026",
     endLabel: "Current",
     bullets: [
-      "Building a C# and Angular change management platform that reviews system change requests with GitHub Copilot, reducing manual document validation by 60%.",
-      "Developing CI/CD and user-account validation workflows that automate software releases and reduce failures across TD Wealth services.",
+      "Building a C#/ASP.NET Core and Angular change-management platform that applies application-specific validation rules and integrates the GitHub Copilot SDK for AI-assisted document review.",
+      "Developing backend automation across TD Wealth for account validation and application delivery using SQL Server, PowerShell, GitHub Actions, SonarQube, and Nexus.",
     ],
   },
   {
@@ -32,8 +32,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "January 2026",
     endLabel: "April 2026",
     bullets: [
-      "Built and deployed secure microservices on Azure Kubernetes Service to support communication between financial institutions.",
-      "Automated application deployments with GitHub Actions and ArgoCD, reducing release effort by approximately 70% while adding security and quality checks.",
+      "Worked on secure cloud-native microservices deployed to Azure Kubernetes Service, using APIM, MSAL, PKCE, and JWT for authenticated B2B communication.",
+      "Supported automated application delivery through GitHub Actions, ArgoCD, Terraform, Helm, and ACR, with integrated security and quality checks.",
     ],
   },
   {
@@ -45,8 +45,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "January 2025",
     endLabel: "April 2025",
     bullets: [
-      "Built a full-stack onboarding application with Java, Spring Boot, Angular, and Oracle DB to replace manual workflows used for financial institution onboarding.",
-      "Added CSV upload, validation, and database processing features to the onboarding application, reducing onboarding errors by approximately 40%.",
+      "Built a full-stack financial onboarding application with Java, Spring Boot, Angular, TypeScript, and Oracle DB to replace manual support workflows.",
+      "Developed backend workflows for ingesting, validating, and storing financial data using Spring JPA, SQL, REST APIs, and Unix-based file processing.",
     ],
   },
   {
@@ -58,8 +58,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "May 2024",
     endLabel: "August 2024",
     bullets: [
-      "Improved CI/CD workflows for Ford Pro services using Tekton, Docker, and Azure DevOps to make builds and deployments more reliable.",
-      "Built automated API and end-to-end tests with Playwright, Cypress, and Postman, while using Datadog to investigate production issues.",
+      "Built automated validation across frontend, backend, APIs, and databases using TypeScript, Playwright, Cypress, Postman, and SQL.",
+      "Supported CI/CD and production debugging with Tekton, Docker, Azure DevOps, Linux, and Datadog across distributed Ford Pro services.",
     ],
   },
   {
@@ -71,8 +71,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "September 2023",
     endLabel: "December 2023",
     bullets: [
-      "Developed reusable automated tests for APIs, database operations, and end-to-end application workflows using TypeScript-based tools.",
-      "Integrated automated validation into CI/CD workflows and worked with developers to debug issues across frontend, backend, database, and infrastructure layers.",
+      "Developed reusable automation for API, database, and end-to-end application testing using TypeScript-based tooling.",
+      "Worked with developers to investigate failures across application, database, and deployment layers."
     ],
   },
   {
@@ -84,8 +84,8 @@ export const experiences: readonly ExperienceEntry[] = [
     startLabel: "January 2023",
     endLabel: "April 2023",
     bullets: [
-      "Developed automated tests for database operations, backend services, and file-verification workflows using SQL, JavaScript, and TypeScript.",
-      "Built end-to-end automated testing for automobile auction applications and integrated test execution into Azure DevOps CI/CD pipelines.",
+      "Built automated validation for backend services, database operations, and file-processing workflows using SQL, JavaScript, and TypeScript.",
+      "Integrated API and end-to-end testing into Azure DevOps CI/CD pipelines using SoapUI, Testim, and Linux/Unix tooling.",
     ],
   },
 ];
